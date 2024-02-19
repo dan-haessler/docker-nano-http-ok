@@ -1,0 +1,15 @@
+[package]
+name = "nano-http-ok"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[profile.dev]
+panic = "abort"
+[profile.release]
+codegen-units = 1
+panic = "abort"
+strip = true
+opt-level = "z"
+lto = true
