@@ -1,0 +1,14 @@
+name: Test
+
+on:
+    workflow_call:
+
+jobs:
+    docker:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v4
+
+            - name: Build Image
+              run: docker build .
